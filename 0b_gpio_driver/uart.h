@@ -5,6 +5,7 @@
 #include "stm32f4xx.h"                  // Device header
 #include <stdio.h>
 
+// Create void functions
 void USART2_Init(void);
 void test_setup(void);
 
