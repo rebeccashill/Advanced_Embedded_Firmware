@@ -16,9 +16,10 @@ void state_c_function(void);
 void state_machine_init(void);
 
 
-static void (*state_table[])(void) ={state_a_function,
-																		 state_b_function,
-																		 state_c_function
+static void (*state_table[])(void) ={
+	state_a_function,
+	state_b_function,
+	state_c_function
 
 };
 static State_Type current_state;
