@@ -3,9 +3,9 @@
 
 void p1_button_init(void){
 
-   RCC->AHB1ENR |=(1U<<2); //Enable clock to PORTC
+   RCC->AHB1ENR |=(1U<<2); // Enable clock to PORTC
 	
-	//Set P13 as input
+	// Set P13 as input. Protocol P13 handles input and output signals.
 	GPIOC->MODER  &= ~(0U<<26);
 	GPIOC->MODER  &= ~(0U<<27);
 
