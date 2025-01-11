@@ -1,9 +1,9 @@
 #include "uart.h"
 
 void USART2_Init(void){
-//1.enable clock access to uart2
+//1. Enable clock access to uart2
  RCC->APB1ENR  |=  0x20000; 
-//2.enable closk access to portA
+//2. Enable clock access to portA
  RCC->AHB1ENR   |=0x01;
 //3.Enable pins for alternate fucntions, pa2, pa3
  
