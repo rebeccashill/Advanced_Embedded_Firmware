@@ -7,6 +7,7 @@ bool btn_state;
 int main(){
   
 	USART2_Init();
+	// Initialize button
 	p1_button_init();
 
 	while(1){
