@@ -45,7 +45,7 @@ int main(){
 
 void state_machine_init(void){
 	
- current_state  = STATE_A;
+ current_state++;
  Clock =0;
 }
 
@@ -56,7 +56,7 @@ float sa_delta;
 void state_a_function(void){
 	
 	 if(Clock  == 2){
-		current_state =  STATE_B;
+		current_state++;
 
 		sa_now  = HAL_GetTick();
 		sa_delta =  sa_now - sa_prev_time;
@@ -77,7 +77,7 @@ float sb_delta;
 
 void state_b_function(void){
 	 if(Clock == 5){
-	  current_state  = STATE_C;
+	  current_state++;
 		 
 		sb_now  = HAL_GetTick();
 		sb_delta =  sb_now -  sb_prev_time;
@@ -95,7 +95,7 @@ float sc_delta;
 void state_c_function(void){
 	if(Clock  == 9){
 		Clock =0;
-		current_state = STATE_A;
+		current_state++;
 		sc_now =  HAL_GetTick();
 		sc_delta = sc_now - sc_prev_time;
 		sc_delta /=1000;
